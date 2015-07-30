@@ -18,7 +18,8 @@ module.exports = React.createClass({displayName: "exports",
         minView: React.PropTypes.number,
         onBlur: React.PropTypes.func,
         onChange: React.PropTypes.func,
-        placeholder: React.PropTypes.string
+        placeholder: React.PropTypes.string,
+        showTodayBtn: React.PropTypes.bool
     },
 
     getInitialState: function() {
@@ -217,7 +218,7 @@ module.exports = React.createClass({displayName: "exports",
 
         var calendar = !this.state.isVisible ? '' :
             React.createElement("div", {className: "input-calendar-wrapper", onClick: this.calendarClick}, 
-                view, React.createElement("span", {className: "today-btn", onClick: this.todayClick}, "Today")
+                view, " (this.state.showTodayBtn ? ", React.createElement("span", {className: "today-btn", onClick: this.todayClick}, "Today"), " : '')"
             );
 
         var iconClass = cs({

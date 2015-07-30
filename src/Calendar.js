@@ -18,7 +18,8 @@ module.exports = React.createClass({
         minView: React.PropTypes.number,
         onBlur: React.PropTypes.func,
         onChange: React.PropTypes.func,
-        placeholder: React.PropTypes.string
+        placeholder: React.PropTypes.string,
+        showTodayBtn: React.PropTypes.bool
     },
 
     getInitialState: function() {
@@ -217,7 +218,7 @@ module.exports = React.createClass({
 
         var calendar = !this.state.isVisible ? '' :
             <div className="input-calendar-wrapper" onClick={this.calendarClick}>
-                {view}<span className="today-btn" onClick={this.todayClick} >Today</span>
+                {view} (this.state.showTodayBtn ? <span className="today-btn" onClick={this.todayClick} >Today</span> : '')
             </div>;
 
         var iconClass = cs({
