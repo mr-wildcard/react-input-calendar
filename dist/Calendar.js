@@ -218,7 +218,7 @@ module.exports = React.createClass({displayName: "exports",
 
         var calendar = !this.state.isVisible ? '' :
             React.createElement("div", {className: "input-calendar-wrapper", onClick: this.calendarClick}, 
-                view, " (this.state.showTodayBtn ? ", React.createElement("span", {className: "today-btn", onClick: this.todayClick}, "Today"), " : '')"
+                view, this.props.showTodayBtn ? React.createElement("span", {className: "today-btn", onClick: this.todayClick}, "Today") : ''
             );
 
         var iconClass = cs({
