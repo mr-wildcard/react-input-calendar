@@ -1,0 +1,110 @@
+// auto compiled with css2sass
+
+.input-calendar
+  font-family: 'Pontano Sans', sans-serif
+  width: 175px
+  position: relative
+
+.input-calendar-wrapper
+  position: absolute
+  padding: 5px 12px
+  border: 1px solid #c4c4c4
+  border-radius: 5px
+  box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.05)
+  background-color: #fff
+  width: 189px
+  text-align: center
+  left: 140px
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  z-index: 2
+
+.input-calendar
+  .input-calendar-value
+    width: 120px
+    border: 1px solid #ccc
+    border-radius: 4px
+    font-family: 'Pontano Sans', sans-serif
+    font-size: 16px
+    padding: 2px 8px
+    &:focus
+      outline: none
+      border: 1px solid #f39c12
+  .calendar-icon
+    display: inline-block
+    padding: 0 5px
+    height: 27px
+    line-height: 27px
+  .days, .months, .years
+    width: 189px
+    padding-bottom: 2px
+  .cell
+    display: inline-block
+    text-align: center
+    cursor: pointer
+    border: 1px solid #fff
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    &:hover
+      color: #f39c12
+      border: 1px solid #f39c12
+      border-radius: 4px
+    &.current
+      background: #f39c12
+      color: #fff
+      border-radius: 4px
+      opacity: .8
+  .day
+    width: 25px
+    height: 25px
+    line-height: 25px
+    &.prev, &.next
+      opacity: .4
+  .month, .year
+    width: 58px
+    height: 38px
+    line-height: 38px
+  .days-title .cell
+    height: 25px
+    line-height: 28px
+    opacity: 0.5
+    cursor: default
+    &:hover
+      color: #000
+      border: 1px solid #fff
+  .navigation-title
+    width: 100px
+    display: inline-block
+    cursor: pointer
+  .years-view .navigation-title
+    cursor: default
+    &:hover
+      color: #000
+  .navigation-title:hover
+    color: #f39c12
+  .icon-wrapper
+    cursor: pointer
+  .icon
+    cursor: pointer
+    &:hover
+      color: #f39c12
+  .today-btn:hover, .icon-wrapper:hover
+    color: #f39c12
+  .icon > .fa
+    width: 20px
+  .today-btn
+    cursor: pointer
+  .cell.day.today
+    position: relative
+    &:after
+      content: '.'
+      position: absolute
+      bottom: 15px
+      font-size: 20px
+      color: #F39C12
